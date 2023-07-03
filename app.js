@@ -2,14 +2,12 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      timeOutCounter: 0,
     }
   },
 
   methods: {
     add(num) {
       this.counter += num;
-      console.log(this.counter);
     }
   },
 
@@ -31,9 +29,7 @@ const app = Vue.createApp({
   watch: {
     result() {
       setTimeout(() => {
-        this.timeOutCounter++;
         console.log('Timeout counter ' + this.timeOutCounter);
-        this.counter = 0;
       }, 5000)
     }
   }
