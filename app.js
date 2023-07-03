@@ -29,7 +29,7 @@ const app = Vue.createApp({
   watch: {
     result() {
       setTimeout(() => {
-        console.log('Timeout counter ' + this.timeOutCounter);
+        this.counter = 0;
       }, 5000)
     }
   }
